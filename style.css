@@ -261,6 +261,31 @@
     margin-bottom: 15px;
 }
 
+/* Media query khusus untuk layar handphone */
+@media (max-width: 480px) {
+    .guru-grid,.level-2 { /* Ganti dengan class pembungkus kartu Anda */
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* Membagi jadi 2 kolom */
+        gap: 10px; /* Jarak antar kartu agar tidak rapat */
+        padding: 10px;
+    }
+
+    .card-guru { /* Ganti dengan class kartu guru Anda */
+        width: 100%; /* Pastikan kartu memenuhi lebar grid */
+        padding: 15px 5px; /* Kurangi padding agar muat teks */
+    }
+
+    .card-guru img, .inisial-lingkaran { 
+        width: 60px; /* Perkecil ukuran lingkaran/foto agar proporsional */
+        height: 60px;
+        font-size: 1.2rem;
+    }
+
+    .card-guru h3 {
+        font-size: 0.9rem; /* Perkecil ukuran nama guru agar tidak berantakan */
+    }
+}
+
 /* Layout Hirarki */
 .level-1 {
     display: flex;
@@ -425,6 +450,31 @@
     text-align: center;
     padding: 10px;
     transition: bottom 0.3s ease;
+    }
+
+    .modal-content-container {
+        width: 95%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%); /* Menarik gambar ke tengah vertikal */
+    }
+
+    #imgFull {
+        width: 100%;
+        max-height: 70vh; /* Agar gambar tidak terlalu panjang ke bawah */
+        object-fit: contain;
+    }
+
+    /* Memastikan tombol panah (kiri/kanan) tetap terlihat */
+    .prev, .next {
+        padding: 10px;
+        font-size: 18px;
+        background: rgba(0,0,0,0.5); /* Beri background agar kontras */
+        border-radius: 50%;
     }
 }
 
