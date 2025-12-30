@@ -263,14 +263,22 @@
 
 /* Media query khusus untuk layar handphone */
 @media (max-width: 480px) {
-    .guru-grid,.level-2 { /* Ganti dengan class pembungkus kartu Anda */
+    .level-1 .card-guru.leader {
+        width: 100% !important;
+        max-width: 200px;
+        margin: 0 auto !important;
+        padding: 20px 10px;
+        text-align: center;
+    }
+    
+    .guru-grid,.level-2 {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important; /* Membagi jadi 2 kolom */
         gap: 10px; /* Jarak antar kartu agar tidak rapat */
         padding: 10px;
     }
 
-    .card-guru { /* Ganti dengan class kartu guru Anda */
+    .card-guru {
         width: 100%; /* Pastikan kartu memenuhi lebar grid */
         padding: 15px 5px; /* Kurangi padding agar muat teks */
     }
@@ -647,4 +655,5 @@
     color: white;
     text-shadow: 0 0 10px #00e5ff;
 }
+
 
